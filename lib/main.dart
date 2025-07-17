@@ -15,13 +15,10 @@ class _MyAppState extends State<MyApp> {
   final TextEditingController _controller = TextEditingController();
   String resultText = '';
   List<String> texts = [];
-  int i = 0;
-
   void showInput() {
     setState(() {
-      texts[i] = _controller.text;
-      i++;
-      for (var j = 0; j <= i; j++) Text('$texts');
+      texts.add(_controller.text);
+      _controller.clear();
     });
   }
 
@@ -50,8 +47,9 @@ class _MyAppState extends State<MyApp> {
                   child: const Text('입력값 확인'),
                 ),
                 const SizedBox(height: 30),
-
-                ///style: const TextStyle(fontSize: 18),
+                ...texts.map(
+                  (text) => Text(text, style: const TextStyle(fontSize: 18)),
+                ),
               ],
             ),
           ),
