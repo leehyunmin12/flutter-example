@@ -15,9 +15,12 @@ class _MyAppState extends State<MyApp> {
   final TextEditingController _controller = TextEditingController();
   String resultText = '';
   List<String> texts = [];
+  int sum = 0;
   void showInput() {
     setState(() {
-      texts.add(_controller.text);
+      // texts.add(_controller.text);
+      int k = int.parse(_controller.text);
+      if (k != Null) sum += k;
       _controller.clear();
     });
   }
@@ -47,9 +50,16 @@ class _MyAppState extends State<MyApp> {
                   child: const Text('입력값 확인'),
                 ),
                 const SizedBox(height: 30),
-                ...texts.map(
-                  (text) => Text(text, style: const TextStyle(fontSize: 18)),
+                Text(
+                  '총 합 : $sum',
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold
+                  ),
                 ),
+                // ...texts.map(
+                //   (text) => Text(text, style: const TextStyle(fontSize: 18)),
+                // ),
               ],
             ),
           ),
