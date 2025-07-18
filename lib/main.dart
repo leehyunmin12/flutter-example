@@ -21,6 +21,7 @@ class _MyAppState extends State<MyApp> {
       // texts.add(_controller.text);
       int k = int.parse(_controller.text);
       if (k != Null) sum += k;
+      if (k == 0) sum = 0;
       _controller.clear();
     });
   }
@@ -54,7 +55,7 @@ class _MyAppState extends State<MyApp> {
                   '총 합 : $sum',
                   style: const TextStyle(
                     fontSize: 18,
-                    fontWeight: FontWeight.bold
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 // ...texts.map(
