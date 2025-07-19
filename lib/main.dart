@@ -48,7 +48,7 @@ class _MyAppState extends State<MyApp> {
                 const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: showInput,
-                  child: const Text('입력값 확인'),
+                  child: const Text('입력값 확인하기'),
                 ),
                 const SizedBox(height: 30),
                 Text(
