@@ -66,7 +66,10 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 5,),
-                    Text('이메일을 잊으셨나요?',style: TextStyle(fontSize: 13,color: Colors.blue)),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text('이메일을 잊으셨나요?',style: TextStyle(fontSize: 13,color: Colors.blue)),
+                    ),
                     SizedBox(height: 20,),
                     RichText(
                       text: TextSpan(
@@ -86,14 +89,20 @@ class MyApp extends StatelessWidget {
                             onPressed: (){},
                             child: Text('계정 만들기',style: TextStyle(fontSize: 12,color: Colors.blue),)
                           ),
-                          ElevatedButton(
-                            onPressed: (){},
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.blue,
-                              
+                          SizedBox(
+                            height: 40,
+                            child: ElevatedButton(
+                              onPressed: (){},
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.blue,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5),
+                                  
+                                )
+                              ),
+                              child: Text('다음',style: TextStyle(fontSize: 12,color: Colors.white),),
                             ),
-                            child: Text('다음',style: TextStyle(fontSize: 12,color: Colors.white),),
-                          ),
+                          )
 
                       ],
                     ),
