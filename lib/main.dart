@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
                 height: 400,
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: const Color.fromARGB(255, 224, 224, 224),
+                    color: const Color.fromARGB(255, 235, 235, 235),
                     width: 1,
                   ),
                   borderRadius: BorderRadius.all(Radius.circular(10)),
